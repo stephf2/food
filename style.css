@@ -1,0 +1,103 @@
+:root {
+    --primary-green: #8D8741;
+    --primary-blue:#659DBD;
+    --primary-beige:#DAAD86;
+    --secondary-beige:#BC986A;
+    --primary-cream:#FBEEC1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: monospace;
+    background-color: gold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+div {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    height: 30%;
+}
+
+
+section {
+    background-color:  var(--primary-cream);
+    font-size: 2.4rem;
+    flex: 20%;
+    border: 1px solid white;
+}
+
+
+nav {
+    background-color: var(--primary-blue);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    font-size: 2.2rem;
+}
+
+.home {
+    background-color: var(--primary-beige);
+    height: 10%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+    
+}
+
+.recipes {
+    background-color: var(--primary-green);
+    height: 10%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.day{
+    background-color: var(--primary-green);
+    height: 8%;
+    text-align: center;
+}
+
+.maincourse {
+    background-color: var(--primary-beige);
+    height: 25vh;
+}
+
+.starter {
+    background-color: var(--secondary-beige);
+    height: 25vh;
+}
+
+.dessert {
+    background-color: var(--primary-green);
+    height: 25vh;
+}
+
+.recent {
+    background-color: var(--primary-cream);
+    height: 25vh;
+}
+ul {
+    margin-left: 30px;
+}
+
+
