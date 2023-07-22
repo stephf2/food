@@ -14,96 +14,93 @@
 
 html {
     font-size: 62.5%;
+    font-family: monospace;
 }
 
 body {
-    font-family: monospace;
-    background-color: var(--primary-blue);
+    background-color: #FBEEC1;
+    display: grid;
+    grid-template-columns: 1fr 15fr 15fr;
+    grid-template-rows:1fr 5fr 2.5fr 2.5fr 0.2fr;
+    gap: 1px;
+    grid-template-areas: 
+    "header header header"
+    "nav image image"
+    "nav starter maincourse"
+    "nav dessert recent"
+    "footer footer footer";
+}
+
+header {
+    background-color: #8D8741;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+    grid-area: header;
+    font-size: 4rem;
 }
 
-div {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    height: 30%;
+img{
+    grid-area: image;
+    object-fit: cover;
+    justify-self: center;
 }
-
-
-section {
-    background-color:  var(--primary-cream);
-    font-size: 2.4rem;
-    flex: 20%;
-    border: 1px solid white;
-}
-
 
 nav {
     background-color: var(--primary-blue);
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    height: 100%;
-    width: 15%;
-    font-size: 2.2rem;
+    align-items: center;
+    grid-area: nav;
 }
 
-main {
-    width: 85%;
-    position: absolute;
-    right: 0px;
-}
-
-.home {
-    background-color: var(--primary-beige);
-    height: 10%;
-    text-align: center;
-    border: 1px solid black;
+button {
+    width: 150px;
+    height: 60px;
+    border-color: #FBEEC1;
     border-radius: 20px;
-    margin-top: 20px;
-    
-}
-
-.recipes {
-    background-color: var(--primary-green);
-    height: 10%;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-.day{
-    background-color: var(--primary-green);
-    height: 8%;
-    text-align: center;
-}
-
-.maincourse {
+    margin: 30px 10px;
+    font-size: 2.5rem;
     background-color: var(--primary-beige);
-    height: 25vh;
+    cursor: pointer;
+}
+
+div {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .starter {
-    background-color: var(--secondary-beige);
-    height: 25vh;
+    grid-area: starter;
+    background-color: var(--primary-beige);
+
+}
+
+.maincourse {
+    grid-area: maincourse;
+    background-color: var(--primary-green);
+
 }
 
 .dessert {
-    background-color: var(--primary-green);
-    height: 25vh;
+    grid-area: dessert;
+    background-color: var(--secondary-beige);
+
 }
 
 .recent {
+    grid-area: recent;
     background-color: var(--primary-cream);
-    height: 25vh;
-}
-ul {
-    margin-left: 30px;
 }
 
+footer{
+    background-color: var(--primary-green);
+    grid-area: footer;
+}
 
+div:hover {
+    background-color: lightcyan;
+}
+@media screen and (max-width: 750px){}
